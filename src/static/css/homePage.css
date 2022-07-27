@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.heading {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 50px;
+  line-height: 75px;
+  /* identical to box height */
+
+  background: linear-gradient(93.1deg, #1260d3 -10.48%, #6eafee 132.68%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  /* text-fill-color: transparent; */
+  /* text-fill-color: transparent; */
+}
+.cardBox {
+  display: flex;
+  justify-content: center;
+}
+
+.cardSection {
+  width: 100%;
+  display: flex;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 33px 42px;
+  gap: 34px;
+  height: max-content;
+  background: #ffffff;
+  box-shadow: 0px 0px 192px -1px rgba(119, 146, 233, 0.56);
+  border-radius: 17px;
+
+  /* Inside auto layout */
+  margin: 20px;
+  flex: none;
+  order: 2;
+  flex-grow: 1;
+}
+.cardHeading {
+  margin-top: -20px;
+}
+
+.cardImg {
+  width: 100% !important;
+  /* height: auto !important; */
+  border-radius: 17px;
+  flex-grow: 2;
+  object-fit: cover;
+  margin-bottom: -20px;
+}
+
+.card:hover {
+  /* box-shadow: 0px 0px 192px -1px rgba(0, 47, 202, 0.56); */
+  transform: translateY(-10px);
+  transition: all 0.3s ease-in-out;
+}
+
+/* dashboard */
+
+.headingSection {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap-reverse;
+}
+
+.avatar {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+#studentsTable {
+  font-family: Arial, Helvetica, sans-serif;
+  /* border-collapse: collapse; */
+  width: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+#studentsTable td,
+#studentsTable th {
+  /* border: 1px solid #ddd; */
+  padding: 8px;
+}
+
+#studentsTable tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#studentsTable tr:hover {
+  background-color: rgb(148, 40, 40);
+}
+
+#studentsTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #c5ffea;
+  color: rgb(91, 55, 248);
+  /* border-radius: 12px; */
+}

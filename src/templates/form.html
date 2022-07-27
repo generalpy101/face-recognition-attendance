@@ -1,0 +1,110 @@
+{%extends "base.html"%} {%block head%}
+<link rel="icon" href="download.png" type="image/x-icon" />
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='form-css.css') }}"
+/>
+<script src="{{ url_for('static', filename='formjs.js') }}" defer></script>
+<title>Registraion Form</title>
+{%endblock head%} {%block main%}
+<div class="message"></div>
+<div class="form-page">
+  <div class="progressbar">
+    <div class="progress" id="progress"></div>
+
+    <div
+      class="progress-step progress-step-active"
+      data-title="ACADEMIC DETAILS"
+    ></div>
+
+    <div class="progress-step" data-title="CAPTURE"></div>
+  </div>
+  <form action="#" class="form">
+    <div class="form-step form-step-active">
+      <h1 class="text-center">ACADEMIC DETAILS</h1>
+      <div class="input-group">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Name"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <input
+          type="text"
+          number="position"
+          id="position"
+          placeholder="Registration Number"
+          required
+        />
+      </div>
+      <div class="input-group">
+        <input
+          type="text"
+          number="rollnumber"
+          id="rollnumber"
+          placeholder="Roll Number"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <input
+          type="password"
+          number="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <select class="input-group" name="branch" id="branch">
+          <option value="">Branch</option>
+          <option value="1">Computer Engineering</option>
+          <option value="2">Information Technology</option>
+          <option value="3">Electronics and Telecommunication</option>
+          <option value="4">Mechanical</option>
+        </select>
+      </div>
+      <div class="input-group">
+        <select class="input-group" name="year" id="year">
+          <option>Year</option>
+          <option value="1">First</option>
+          <option value="2">Second</option>
+          <option value="3">Third</option>
+          <option value="4">Fourth</option>
+        </select>
+      </div>
+
+      <div class="">
+        <a  href="#" class="button btn-next width-50 ml-auto">Next</a>
+      </div>
+    </div>
+
+    <div class="form-step">
+      <h1 class="text-center">CAPTURE</h1>
+      <div class="camera">
+        <button id="start-camera">Start Camera</button>
+        <button id="stop-camera">Stop Camera</button>
+
+        <div class="video1">
+          <video id="video" autoplay></video>
+        </div>
+        <div id="dataurl-container">
+          <canvas id="canvas"></canvas>
+        </div>
+        <div class="btns-group">
+          <a href="#" class="button btn-prev">Previous</a>
+          <a href="#" class="button btn-capture" id="click-photo">Capture</a>
+        </div>
+        <div class="btns-group" style="margin-top: 1rem">
+          <a href="#" class="button btn-submit hidden">Submit<a/>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+{%endblock main%}

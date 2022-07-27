@@ -1,0 +1,12 @@
+{%extends "base.html"%} {%block head%}
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+<script defer src="{{ url_for('static', filename='face-api.min.js')}}"></script>
+<script defer src="{{ url_for('static', filename='script.js') }}"></script>
+{%endblock head%} {%block main%}
+<div class="message"> </div>
+<div class="capture-page">
+  <div class="l">
+    <video id="video" width="400" height="400" autoplay muted></video>
+  </div>
+</div>
+{%endblock main%}

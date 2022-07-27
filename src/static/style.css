@@ -1,0 +1,31 @@
+.l {
+  border-radius: 10px;
+}
+#video {
+  border-radius: 10px;
+  width: 550px;
+  height: 550px;
+  border: 10px solid blanchedalmond;
+}
+.capture-page {
+  background-image: url(/static/images/back.jpeg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+canvas {
+  position: absolute;
+}
+
+.message-danger {
+  background-color: #ffa8a8;
+  border: 1 px solid #f03e3e;
+  padding: 1rem;
+}

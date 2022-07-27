@@ -1,0 +1,39 @@
+{%extends "base.html"%}
+{%block head%}
+    <link rel="stylesheet" href="/static/css/homePage.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face Detection application</title>
+{%endblock head%}
+{%block main%}
+<div class="container">
+    <div class="row m-5">
+        <div class="col-md-12 mt-5">
+            <h1 class="heading">Hi there!</h1>
+            <p class="px-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis error mollitia sit, alias provident nostrum officia possimus explicabo libero hic perferendis sequi amet eius distinctio nam quis blanditiis repudiandae quas?</p>
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <div class="d-flex cardSection" >
+            <a href="{{url_for("loginAdmin")}}">
+                <div class="card">
+                    <img src="/static/images/teacher.png" class="cardImg" alt="Teacher Illustration"/>
+                    <h3 class="cardHeading" >Teacher</h3>
+                </div>
+            </a>
+            <a href="{{url_for("loginStudent")}}">
+                <div class="card">
+                    <img src="/static/images/student.png" class="cardImg" alt="Teacher Illustration"/>
+                    <h3 class="cardHeading" >Student</h3>
+                </div>
+            </a>
+            <a href="{{url_for("capture")}}">
+                <div class="card">
+                    <img src="/static/images/capture.png" class="cardImg" alt="Teacher Illustration"/>
+                    <h3 class="cardHeading" >Capture</h3>
+                </div>
+            </a>
+        </div>
+    </div>
+{%endblock main%}

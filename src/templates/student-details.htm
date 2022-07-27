@@ -1,0 +1,33 @@
+{%extends "base.html"%} {%block head%}
+<title>Student Details</title>
+<link rel="stylesheet" href="/static/css/student-identified.css" />
+{%endblock%} {%block main%}
+<div class="container">
+  <div class="header">
+    <h2>Attendance for following student(s) has been logged</h2>
+  </div>
+  <div class="main-section">
+    {%for i in data%}
+    <div class="wrap">
+      <div class="card-container">
+        <div class="top-card"></div>
+        <div class="top-card2"></div>
+        <div class="circle"></div>
+        <img
+          class="image-class"
+          src="{{url_for('static',filename='images/smiling-boy.jpeg')}}"
+        />
+        <p class="title-text">{{i.name}}</p>
+        <p class="info-text">
+          {%if i.year == '1'%} First Year {%elif i.year == '2'%} Second Year {%elif
+          i.year == '3'%} Third Year {%elif i.year == '4'%} Fourth Year {%endif%} Student
+        </p>
+        <p class="desc-text"></p>
+        <div class="vertical-line"></div>
+      </div>
+    </div>
+    {%endfor%}
+  </div>
+</div>
+
+{%endblock%}

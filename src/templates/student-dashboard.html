@@ -1,0 +1,34 @@
+{% extends 'base.html' %} {%block head%}
+<link
+  rel="stylesheet"
+  href="{{url_for('static',filename='/css/student-dashboard.css')}}"
+/>
+{%endblock head%} {%block main%}
+<div class="container">
+  <div class="dashboard">
+    <div class="wrap">
+      <div class="card-container">
+        <div class="top-card"></div>
+        <div class="top-card2"></div>
+        <div class="circle"></div>
+        <img
+          class="image-class"
+          src="{{url_for('static',filename='images/smiling-boy.jpeg')}}"
+        />
+        <p class="title-text">{{current_user.name}}</p>
+        <p class="info-text">
+          {%if current_user.year == '1'%} First Year {%elif current_user.year == '2'%} Second Year
+          {%elif current_user.year == '3'%} Third Year {%elif current_user.year == '4'%} Fourth Year
+          {%endif%} Student
+        </p>
+        <p class="desc-text">
+          Account is  {{ (current_user.created_on - today).days | abs }} days old
+          Attendance : {{current_user.attendance}}
+          Roll Number : {{current_user.rollno}}
+          Registration ID : {{current_user.regid}}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+{%endblock main%}

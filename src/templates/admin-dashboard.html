@@ -1,0 +1,69 @@
+{%extends 'base.html'%} {%block head%}
+<link
+  rel="stylesheet"
+  href="{{url_for('static',filename='css/admin-dashboard.css')}}"
+/>
+{%endblock head%} {%block main%}
+<div class="message">
+    
+</div>
+<div class="container">
+  <div class="main">
+    <div class="table-responsive">
+      <table class="table table-sm table-borderless mb-0" id="display-table">
+        <thead class="thead-dark">
+          <tr>
+            <th>S/N</th>
+            <th>Student Name</th>
+            <th>Attendance</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for student in students.items %}
+          <tr>
+            <th scope="row">{{ loop.index }}</th>
+            <td>{{ student.name }}</td>
+            <td>{{ student.attendance }}</td>
+            <td><a href="#" class="btn btn-danger delete-user" id="{{student.uuid}}">Delete</a></td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <!-- Pagination Links-->
+    <div class="text-right">
+      <a
+        href="{{ url_for('adminDashboard', page=students.prev_num) }}"
+        class="btn btn-outline-dark {% if students.page == 1 %}disabled{% endif %}"
+      >
+        &laquo;
+      </a>
+      {% for page_num in students.iter_pages(left_edge=1, right_edge=1,
+      left_current=1, right_current=2) %} {% if page_num %}
+      {% if students.page == page_num %}
+      <a href="{{ url_for('adminDashboard', page=page_num) }}" class="btn btn-dark">
+        {{ page_num }}
+      </a>
+      {% else %}
+      <a
+        href="{{ url_for('adminDashboard', page=page_num) }}"
+        class="btn btn-outline-dark"
+      >
+        {{ page_num }}
+      </a>
+      {% endif %} {% else %} ... {% endif %} {% endfor %}
+      <a
+        href="{{ url_for('adminDashboard', page=students.next_num) }}"
+        class="btn btn-outline-dark {% if students.page == students.pages %}disabled{% endif %}"
+      >
+        &raquo;
+      </a>
+    </div>
+    <p class="text-right mt-3">
+      Showing page {{ students.page }} of {{ students.pages }}
+    </p>
+  </div>
+</div>
+<script src="{{url_for('static',filename='js/admin-dashboard.js')}}"></script>
+{%endblock main%}

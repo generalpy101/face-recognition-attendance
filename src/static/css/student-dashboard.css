@@ -1,0 +1,131 @@
+body {
+    background-color: #8584b4;
+  }
+  
+  .container {
+    margin-top: 2rem;
+  }
+  
+  .header {
+      text-align: center;
+      color : white;
+      font-family: sans-serif;
+      margin-bottom: 2rem;
+  }
+  
+  .main-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .card-container {
+      margin: 0 auto;
+    width: 80%;
+    background-color: white;
+    position: relative;
+    z-index: -2;
+    border-radius: 4px;
+    overflow: hidden;
+    text-align: center;
+    -webkit-box-shadow: 0px 7px 14px -6px rgba(0, 0, 0, 0.53);
+    -moz-box-shadow: 0px 7px 14px -6px rgba(0, 0, 0, 0.53);
+    box-shadow: 0px 7px 14px -6px rgba(0, 0, 0, 0.53);
+  }
+  
+  .top-card {
+    background-color: #74fed6;
+    height: 100px;
+    position: relative;
+    z-index: -3;
+    overflow: none;
+  }
+  
+  .menu-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50px;
+  }
+  
+  .circle {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    position: absolute;
+    border-radius: 50%;
+    top: 105px;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    z-index: -1;
+  }
+  
+  .bottom-card {
+    height: 60px;
+    width: 100%;
+    position: absolute;
+    background-color: #1e88e5;
+    bottom: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    color: #fff;
+  }
+  
+  .bottom-card-title {
+    margin-top: 14px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .bottom-card-sub {
+    margin-top: -6px;
+    font-size: 14px;
+  }
+  
+  .vertical-line {
+    width: 1px;
+    height: 60px;
+    bottom: 0;
+    left: 50%;
+    margin-top: -15px;
+    background-color: #eceff1;
+    position: absolute;
+  }
+  
+  .image-class {
+    border-radius: 50%;
+    z-index: 3;
+    width: 110px;
+    height: 110px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-top: -50.5px;
+    object-fit: cover;
+  }
+  
+  .title-text {
+    position: relative;
+    z-index: 4;
+    margin-top: 75px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #263238;
+  }
+  
+  .info-text {
+    position: relative;
+    z-index: 4;
+    margin-top: 12px;
+    font-size: 18px;
+    color: #263238;
+  }
+  
+  .desc-text {
+    position: relative;
+    z-index: 4;
+    margin-top: -6px;
+    font-size: 14px;
+    color: #263238;
+    padding: 30px;
+  }
+  
